@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HomeWork_1</string>
+
+    <string name="enter_name">Введите имя</string>
+    <string name="enter">ВОЙТИ</string>
+    <string name="back">НАЗАД</string>
+</resources>
