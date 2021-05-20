@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,6 +28,18 @@
         android:text="@string/enter"
         android:textAppearance="@style/BtnTextStyle"
         android:backgroundTint="#FFB74D"
+        tools:ignore="UnusedAttribute"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_get__list"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_enter"
+        android:background="@drawable/btn_style"
+        android:text="@string/get_list"
+        android:textAppearance="@style/BtnTextStyle"
+        android:backgroundTint="#42A5F5"
         tools:ignore="UnusedAttribute"/>
 
 </RelativeLayout>

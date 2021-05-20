@@ -20,6 +20,7 @@ class SecondActivity : AppCompatActivity() {
             if (edit_name_second.text.isEmpty())
                 Toast.makeText(applicationContext, R.string.enter_name, Toast.LENGTH_SHORT).show()
             else {
+                App.addList(edit_name_second.text.toString())
                 setResult(
                     Activity.RESULT_OK, Intent()
                     .putExtra(TOTAL_COUNT, edit_name_second.text.toString()))

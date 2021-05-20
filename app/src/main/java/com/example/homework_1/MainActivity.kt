@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         resultName = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
             resultName ->
             if (resultName.resultCode == Activity.RESULT_OK) {
-                edit_name.setText(
-                        resultName.data?.getStringExtra(SecondActivity.TOTAL_COUNT).toString())
+                val name = resultName.data?.getStringExtra(SecondActivity.TOTAL_COUNT).toString()
+                edit_name.setText(name)
             }
         }
 
@@ -31,9 +31,15 @@ class MainActivity : AppCompatActivity() {
             if (edit_name.text.isEmpty())
                 Toast.makeText(applicationContext, R.string.enter_name, Toast.LENGTH_SHORT).show()
             else {
+                App.addList(edit_name.text.toString())
                 resultName.launch(Intent(this, SecondActivity :: class.java)
-                        .putExtra(SecondActivity.TOTAL_COUNT, edit_name.text.toString()))
+                    .putExtra(SecondActivity.TOTAL_COUNT, edit_name.text.toString()))
             }
+        }
+
+        btn_get__list.setOnClickListener {
+            App.addList(edit_name.text.toString())
+            startActivity(Intent(this, ThirdActivity :: class.java))
         }
     }
 }
